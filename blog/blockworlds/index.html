@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ReiTW's website</title>
+    <link rel="stylesheet" href="/fonts.css">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <div class="content">
+      <header id="header">
+          <div>
+            <a id="main-title" href="/">ReiTW</a> 💻
+          </div>
+          <nav>
+            <a href="/blog">blog</a>
+            <a href="/bookmarks">bookmarks</a>
+            <a href="/about">about</a>
+          </nav>
+      </header>
+      
+      <div class="container">
+        
+
+<h1 class="blog-title">Testing up Markdown</h1>
+<p class="blog-subtitle">Published in <strong>2022-09-13</strong></p>
+<p class="blog-subtitle">
+
+    
+      <a href="https://reitw.fr/tags/rust/">#Rust</a>
+    
+
+</p>
+
+<div class="blog-content">
+<p>This is a test using Markdown language !</p>
+<p>Here's a code sample to create an UDP socket, written in <code>rust</code> !</p>
+<pre data-lang="rust" style="background-color:#0f1419;color:#bfbab0;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ff7733;">use </span><span>std</span><span style="color:#f29668;">::</span><span>net</span><span style="color:#f29668;">::</span><span>UdpSocket</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span style="color:#ff7733;">fn </span><span style="color:#ffb454;">main</span><span>() </span><span style="color:#bfbab0cc;">-&gt; </span><span>std</span><span style="color:#f29668;">::</span><span>io</span><span style="color:#f29668;">::</span><span style="font-style:italic;color:#39bae6;">Result</span><span>&lt;()&gt; {
+</span><span>    {
+</span><span>        </span><span style="color:#ff7733;">let</span><span> socket </span><span style="color:#f29668;">= </span><span>UdpSocket</span><span style="color:#f29668;">::</span><span>bind(</span><span style="color:#c2d94c;">&quot;127.0.0.1:34254&quot;</span><span>)</span><span style="color:#f29668;">?</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span>        </span><span style="font-style:italic;color:#5c6773;">// Receives a single datagram message on the socket. If `buf` is too small to hold
+</span><span>        </span><span style="font-style:italic;color:#5c6773;">// the message, it will be cut off.
+</span><span>        </span><span style="color:#ff7733;">let mut</span><span> buf </span><span style="color:#f29668;">= </span><span>[</span><span style="color:#f29718;">0</span><span style="color:#bfbab0cc;">; </span><span style="color:#f29718;">10</span><span>]</span><span style="color:#bfbab0cc;">;
+</span><span>        </span><span style="color:#ff7733;">let </span><span>(amt</span><span style="color:#bfbab0cc;">,</span><span> src) </span><span style="color:#f29668;">=</span><span> socket</span><span style="color:#f29668;">.</span><span style="color:#f07178;">recv_from</span><span>(</span><span style="color:#f29668;">&amp;</span><span style="color:#ff7733;">mut</span><span> buf)</span><span style="color:#f29668;">?</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span>        </span><span style="font-style:italic;color:#5c6773;">// Redeclare `buf` as slice of the received data and send reverse data back to origin.
+</span><span>        </span><span style="color:#ff7733;">let</span><span> buf </span><span style="color:#f29668;">= &amp;</span><span style="color:#ff7733;">mut</span><span> buf[</span><span style="color:#f29668;">..</span><span>amt]</span><span style="color:#bfbab0cc;">;
+</span><span>        buf</span><span style="color:#f29668;">.</span><span style="color:#f07178;">reverse</span><span>()</span><span style="color:#bfbab0cc;">;
+</span><span>        socket</span><span style="color:#f29668;">.</span><span style="color:#f07178;">send_to</span><span>(buf</span><span style="color:#bfbab0cc;">, </span><span style="color:#f29668;">&amp;</span><span>src)</span><span style="color:#f29668;">?</span><span style="color:#bfbab0cc;">;
+</span><span>    } </span><span style="font-style:italic;color:#5c6773;">// the socket is closed here
+</span><span>    </span><span style="font-style:italic;color:#39bae6;">Ok</span><span>(())
+</span><span>}
+</span></code></pre>
+<div class="overflow-table">
+<table><thead><tr><th style="text-align: left">Syntax</th><th style="text-align: center">Description</th><th style="text-align: right">Test Text</th></tr></thead><tbody>
+<tr><td style="text-align: left">Header</td><td style="text-align: center">Title</td><td style="text-align: right">Here's this</td></tr>
+<tr><td style="text-align: left">Paragraph</td><td style="text-align: center">Text</td><td style="text-align: right">And more</td></tr>
+</tbody></table>
+</div>
+</div>
+
+
+      </div>
+    </div>
+  </body>
+</html>

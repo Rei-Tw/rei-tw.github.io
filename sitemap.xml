@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://reitw.fr/</loc>
+    </url>
+    <url>
+        <loc>https://reitw.fr/about/</loc>
+    </url>
+    <url>
+        <loc>https://reitw.fr/blog/</loc>
+    </url>
+    <url>
+        <loc>https://reitw.fr/blog/blockworlds/</loc>
+        <lastmod>2022-09-13</lastmod>
+    </url>
+    <url>
+        <loc>https://reitw.fr/blog/test/</loc>
+        <lastmod>2022-09-17</lastmod>
+    </url>
+    <url>
+        <loc>https://reitw.fr/bookmarks/</loc>
+    </url>
+    <url>
+        <loc>https://reitw.fr/tags/</loc>
+    </url>
+    <url>
+        <loc>https://reitw.fr/tags/rust/</loc>
+    </url>
+</urlset>
